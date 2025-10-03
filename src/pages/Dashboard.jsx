@@ -73,7 +73,7 @@ const Dashboard = () => {
 
   const handleCreateTask = async (taskData) => {
     try {
-      const response = await axios.post('/api/tasks', taskData);
+      const response = await axios.post('/tasks', taskData);
       const newTasks = [response.data, ...tasks];
       setTasks(newTasks);
       updateStats(newTasks);
